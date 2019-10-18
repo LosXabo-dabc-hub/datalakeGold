@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Earthquake Dashboard</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default" style="background-color:#1a1a1a;">
+    <div>
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a style="color:	white; font: 28px verlag-book, san-serif; " class="navbar-brand" href="/">Earthquakes</a>
+      </div>
+<!-- Add a logo -->
+    <!-- Trying to cneter logo not working -->
+      <div class="topnav-centered">
+        <a class="Logo" href="/" class="active">
+         <img src="/static/Logo1.png" class="logo" width="100" height="50" alt="centered image" class="active">
+        </a>
+      </div> 
+      
+      <!-- /.navbar-collapse -->
+    </div>
+    </nav>
+    
+    <!--Adding the header image-->
+    <div id="Content_Content_Content_Feature_Feature" class="Feature Overlap">
+	
+        <div>
+            
+                <!-- <a id="Content_Content_Content_Feature_Follow" class="Box Follow" data-type="subject" data-id="4039" href="#"> -->
+                    <span>
+                        <span>
+                            <span>
+                                <!-- <span class="Sprite Heart">Sprite</span>
+                                <span class="Text"> -->
+                                    <!-- <span class="On">Follow Tag</span>
+                                    <span class="Off">Unfollow Tag</span> -->
+                                </span>
+                            </span>
+                        </span>
+                    </span>
+                <!-- </a> -->
+            
+            <!-- </div> -->
+        </div>
+        <span><!-- Scrim --></span>
+        <div class="container1">
+           <img src="/static/homepphotos.jpg"width="1270" height="425" alt="centered image">
+           <div class="bottom-left">Natural Disasters<br>Earthquakes</div>
+        </div>
+    </div>
+    <!-- This is where we create a mid-page navbar -->
+    <!-- <div id="Content_Content_Content_Filters_Wrapper" class="Filters"> -->
+       
+             <!-- Mid-pag navbar -->
+           
+             
+             <!-- NG example test** -->
+
+
+           
+    </div>
+
+  <!-- Creates the Overall Grid -->
+  <div class="col-md-12" style="background-color: #1a1a1a;" style= "font: 28px verlag-book, san-serif; " >
+ <div>
+            <div> 
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav background-color= #">
+          <li class="dropdown" style="color:	white; font: 20px verlag-book, san-serif; " >
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Earthquake News<span class="caret"></span></a>
+            <ul class="dropdown-menu" >
+                <li> <a href="{{ url_for('news1') }}">Top Stories</a></li>
+                <li> <a href="{{ url_for('news2r') }}">Earthquakes News in Asia</a></li>
+              
+            </ul>
+          </li>
+          <!--  -->
+          <li style="color:	white; font: 20px verlag-book, san-serif; "> <a href="{{ url_for('aboutr') }}">About</a></li>
+          <li style="color:	white; font: 20px verlag-book, san-serif; "><a href="{{ url_for('data1') }}">Earthquake Data</a></li>
+          <li style="color:	white; font: 20px verlag-book, san-serif; "> <a href="{{ url_for('maps1') }}">Earthquake Map</a></li>
+          
+        </ul>
+      </div>
+    <div class="row">
+
+        <!-- <div class="col-md-6 pad top" > <br>
+          <h3 style="color:	white; font: 28px verlag-book, san-serif; " >Natural Disasters:
+             Earthquakes</h3> <br>
+        </div> -->
+
+        <!-- <div class="col-md-6 pad top"> <br>
+          <h3 style="color:	white; font: 28px verlag-book, san-serif; ">Earthquake MEDIA </h3> <br>
+        </div> -->
+
+      </div>
+
+   
+ <!-- Media section -->
+        <div class="col-md-12"> <br>
+            <br>
+           <div class="aligncenter"></div>
+            <h3 style="color:	white; font: 28px verlag-book, san-serif; ">Earthquake MEDIA </h3> <br>
+          
+              <!-- image 1 Myths about earthquakes and in to myth site -->
+              <div class="row">
+                    <!-- <a href="http://uraha.de/de/?p=390&lang=en"><img src="https://www.bgs.ac.uk/discoveringGeology/hazards/earthquakes/images/restlessGods.jpg" alt="Pictures of Earthquakes" width="375" height="343"></a>
+                    <div class="overlay">
+                      <div class="text">Myths</div>
+                    </div>
+                  </div> -->
+            <a href="http://uraha.de/de/?p=390&lang=en"><img src="https://www.bgs.ac.uk/discoveringGeology/hazards/earthquakes/images/restlessGods.jpg" alt="Pictures of Earthquakes" width="33%" height="33%"></a>
+
+            <!-- image 2 EQ Stats & link  -->
+            <a href="https://worldwidewanderings.net/blog/2019/01/06/latest-update-on-earthquake-statistics/"><img src="http://worldwidewanderings.net/blog/wp-content/uploads/2019/01/Earthquakes.png" alt="Mapping of Earthquakes" width="375" height="343"></a>
+          </div>
+<!-- Trying out a ng pic format -->
+
+<!-- Ending of the NG pic try out  -->
+       </div>
+
+       <div class="col-md-12 pad top"> <br>
+
+        <div>
+          <a href="https://www.volcanodiscovery.com/earthquakes/today.html"><img src="https://img.volcanodiscovery.com/maps/earthquakes-latest.jpg" alt="Earthquake Data Visualizations" width="33%" height="40%"></a>
+
+          <a href= "news3.html"> <iframe width="500" height="180" src="https://www.youtube.com/embed/gH045WGMTAI " frameborder="0" allowfullscreen ng-show="showvideo"></iframe>>
+               <!-- <iframe width="420" height="315" -->
+          <!-- src="https://youtu.be/gH045WGMTAI"> --> 
+          </iframe>
+          <!-- Img 5 what to do if caught in an earthquake -->
+          <div class="container5">
+             <a href="news1.html"><img src="https://www.trbimg.com/img-573cd237/turbine/la-1463603886-snap-photo/2000" alt="Earthquake News" width="65%" height="25%"></a>
+             <div class="bottom-left" type="text" value="ITC Stone Sans II">Stay prepared<br>What to do if caught in an earthquake</div>
+        </div>
+      </div>
+
+      </div>
+
+    </div>
+
+    
+
+  </div>
+
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </html>
