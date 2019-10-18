@@ -109,62 +109,62 @@ def scrape_info():
     # html_table = df.to_html(table_id="html_tbl_css",justify='left',index=False)
     
     
-#     #### MARS HEMISPHERES
-#     # Visit the following URL
-# #    url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
-#     url = "https://astrogeology.usgs.gov/maps/mars-viking-hemisphere-point-perspectives"    
-#     browser.visit(url)
-#     time.sleep(2)    
+    #### MARS HEMISPHERES
+    # Visit the following URL
+#    url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
+    url = "https://astrogeology.usgs.gov/maps/mars-viking-hemisphere-point-perspectives"    
+    browser.visit(url)
+    time.sleep(2)    
     
-#     img_list =[]
-#     img_url_list = []
-#     title_list = []
-#     hemi=2
-#     count=1
-#     x=0
-#     kiki=[]
+    img_list =[]
+    img_url_list = []
+    title_list = []
+    hemi=2
+    count=1
+    x=0
+    kiki=[]
 
-# #    url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
-#     url = "https://astrogeology.usgs.gov/maps/mars-viking-hemisphere-point-perspectives"    
-# #    xpath = ('//*[@id="product-section"]/div[2]/div[' + str(hemi) +']/div/a/h3')
-#     xpath = ('//*[@id="publish"]/div[1]/div[1]/div[4]/div/a[' + str(hemi) +']/div/h3')    
-# #              //*[@id="publish"]/div[1]/div[1]/div[4]/div/a[4]/div/h3
-# #              //*[@id="publish"]/div[1]/div[1]/div[4]/div/a[6]/div/h3
-# #              //*[@id="publish"]/div[1]/div[1]/div[4]/div/a[8]/div/h3
-#     while count < 5:
-#         browser.visit(url)
+#    url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
+    url = "https://astrogeology.usgs.gov/maps/mars-viking-hemisphere-point-perspectives"    
+#    xpath = ('//*[@id="product-section"]/div[2]/div[' + str(hemi) +']/div/a/h3')
+    xpath = ('//*[@id="publish"]/div[1]/div[1]/div[4]/div/a[' + str(hemi) +']/div/h3')    
+#              //*[@id="publish"]/div[1]/div[1]/div[4]/div/a[4]/div/h3
+#              //*[@id="publish"]/div[1]/div[1]/div[4]/div/a[6]/div/h3
+#              //*[@id="publish"]/div[1]/div[1]/div[4]/div/a[8]/div/h3
+    while count < 5:
+        browser.visit(url)
 
-#         hemi_name = browser.find_by_xpath(xpath).text
-#         title_list.append(hemi_name)
-#         results = browser.find_by_xpath(xpath)
+        hemi_name = browser.find_by_xpath(xpath).text
+        title_list.append(hemi_name)
+        results = browser.find_by_xpath(xpath)
 
-#         img = results[0]
-#         img.click()
-#         time.sleep(2)
+        img = results[0]
+        img.click()
+        time.sleep(2)
 
-#         # Scrape page into Soup
-#         html = browser.html
-#         soup = bs(html, "html.parser")
-#         img_desc = soup.find('div', id="wide-image")
-#         img_src = img_desc.find('div',class_='downloads')
-#         image = img_src.find('a')
-#         if image.has_attr('href'):
-#             target_img = image.attrs['href']
-#         img_url_list.append(target_img)
+        # Scrape page into Soup
+        html = browser.html
+        soup = bs(html, "html.parser")
+        img_desc = soup.find('div', id="wide-image")
+        img_src = img_desc.find('div',class_='downloads')
+        image = img_src.find('a')
+        if image.has_attr('href'):
+            target_img = image.attrs['href']
+        img_url_list.append(target_img)
 
-#         hemi+=2
-# #        xpath = ('//*[@id="product-section"]/div[2]/div[' + str(hemi) +']/div/a/h3')
-#         xpath = ('//*[@id="publish"]/div[1]/div[1]/div[4]/div/a[' + str(hemi) +']/div/h3')  
-#         count+=1
-#         x+=1
+        hemi+=2
+#        xpath = ('//*[@id="product-section"]/div[2]/div[' + str(hemi) +']/div/a/h3')
+        xpath = ('//*[@id="publish"]/div[1]/div[1]/div[4]/div/a[' + str(hemi) +']/div/h3')  
+        count+=1
+        x+=1
     
-#     hemisphere_image_urls = []
-#     h=0
-#     for items in title_list:
-#         if h < 4:
-#             dict = {"title": title_list[h], "img_url": img_url_list[h]}
-#             hemisphere_image_urls.append(dict)
-#             h+=1
+    hemisphere_image_urls = []
+    h=0
+    for items in title_list:
+        if h < 4:
+            dict = {"title": title_list[h], "img_url": img_url_list[h]}
+            hemisphere_image_urls.append(dict)
+            h+=1
 
     # Store data in a dictionary
     mars_data = {
@@ -172,9 +172,9 @@ def scrape_info():
         "news_p": news_p,
         "featured_image_url": featured_image_url,
         "featured_img_title": featured_img_title, 
-        "mars_weather": mars_weather
+        "mars_weather": mars_weather,
        # "html_table":html_table,
-       # "hemisphere_image_urls":hemisphere_image_urls
+        "hemisphere_image_urls":hemisphere_image_urls
     }
 
     time.sleep(1)
