@@ -25,7 +25,17 @@ def aboutr():
 
 @app.route("/news2r")
 def news2r():
-    return render_template("news2.html")
+
+    mission_data = mongo.db.collection.find_one()
+
+    # Return template and data
+    if mission_data:
+        print("!!!")
+        return render_template("news2r.html", trek=mission_data)
+    else:
+        return redirect("/scrape")
+
+    # return render_template("news2.html")
 
 @app.route("/new3r")
 def news3r():

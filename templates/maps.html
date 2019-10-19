@@ -22,13 +22,24 @@
     href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css" />
 
   <!-- Our CSS -->
-  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  <link rel="stylesheet" type="text/css" href="static/css/style1.css">
 
 
 </head>
 
 <body>
-
+<!-- Test This changes the font -->
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+  <style>
+    body {
+      font-family: 'Allerta Stencil';
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Test -->
   <nav class="navbar navbar-default" style="background-color:#1a1a1a;color:teal ;">
     <div>
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -51,13 +62,15 @@
           id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav background-color= #">
             <li class="dropdown" style="color:    white; font: 20px 'Allerta Stencil', san-serif; ">
-              <a style="color:white; font: 28px font-family='Allerta Stencil'; " href="#" class="dropdown-toggle"
+              <!-- <a style="color:white; font: 28px font-family='Allerta Stencil'; " href="#" class="dropdown-toggle"
                 data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Earthquake News<span
                   class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li style="color:    white;"> <a href="{{ url_for('news1') }}">Earthquakes News in Americas</a></li>
-                <li> <a href="News2.html">Earthquakes News in Asia</a></li>
-              </ul>
+              <ul class="dropdown-menu"> -->
+                <!-- <li style="color:    white;"> <a href="{{ url_for('news1') }}">Earthquakes News in Americas</a></li>
+                <li> <a href="News2.html">Earthquakes News in Asia</a></li> -->
+              <!-- </ul> -->
+              <li><a style="color:    white; font: 26px font-family='Allerta Stencil'; "
+                href="{{url_for('news1')}}">Earthquake News</a></li>
             <li><a style="color:    white; font: 26px font-family='Allerta Stencil'; "
                 href="{{url_for('maps1')}}">Earthquake Map</a></li>
             <li><a style="color:    white; font: 26px font-family='Allerta Stencil'; "

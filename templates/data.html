@@ -5,9 +5,20 @@
   <meta charset="UTF-8">
   <title>Earthquake Dashboard</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="static/css/style.css">
+  <!-- <link rel="stylesheet" href="static/css/style.css"> -->
 </head>
-
+<!-- Test This changes the font -->
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+  <style>
+    body {
+      font-family: 'Allerta Stencil';
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Test -->
 <body>
   <nav class="navbar navbar-default" style="background-color:#1a1a1a;color:teal ;">
     <div>
@@ -31,12 +42,13 @@
         <div style="color:    white; font: 28px font-family='Allerta Stencil'; " class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav background-color= #">
             <li class="dropdown" style="color:    white; font: 20px 'Allerta Stencil', san-serif; ">
-              <a style="color:white; font: 28px font-family='Allerta Stencil'; " href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              <!-- <a style="color:white; font: 28px font-family='Allerta Stencil'; " href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                 aria-expanded="false">Earthquake News<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li style="color:    white;"> <a href="{{ url_for('news1') }}">Earthquakes News in Americas</a></li>
                 <li> <a href="News2.html">Earthquakes News in Asia</a></li>
-              </ul>
+              </ul> -->
+            <li><a style="color:    white; font: 26px font-family='Allerta Stencil'; " href="{{url_for('news1')}}">Earthquake News</a></li>
             <li><a style="color:    white; font: 26px font-family='Allerta Stencil'; " href="{{url_for('maps1')}}">Earthquake Map</a></li>
             <li><a style="color:    white; font: 26px font-family='Allerta Stencil'; " href="{{url_for('aboutr')}}">Earthquake About</a></li>
             <li><a style="color:    white; font: 26px font-family='Allerta Stencil'; " href="{{url_for('data1')}}">Earthquake Data</a></li>
