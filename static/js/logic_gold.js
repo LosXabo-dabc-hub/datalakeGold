@@ -160,13 +160,6 @@ function createMap(earthquakes, plates, volcanos, oilfields) {
 	maxZoom: 13
 });
 
-var JusticeMap_income = L.tileLayer('http://www.justicemap.org/tile/{size}/income/{z}/{x}/{y}.png', {
-	attribution: '<a href="http://www.justicemap.org/terms.php">Justice Map</a>',
-	size: 'county',
-	opacity: .5,
-	bounds: [[14, -180], [72, -56]]
-});
-
   // Define a baseMaps object to hold our base layers
   var baseMaps = {
     "Street Map": streetmap,
@@ -179,8 +172,7 @@ var JusticeMap_income = L.tileLayer('http://www.justicemap.org/tile/{size}/incom
     Earthquakes: earthquakes,
     Plates: plates,
     Volcanos: volcanos,
-    Oil_Fields: oilfields,
-	"Income": JusticeMap_income
+    Oil_Fields: oilfields
   };
 
   // Create our map, giving it the streetmap and earthquakes layers to display on load

@@ -26,7 +26,7 @@ function buildtable(somedata){
 //Function to filter data by date
 function handleClick(){
     var DateTime =d3.select("#DateTime").property("value");
-	var EventID =d3.select("#EventID").property("value");
+	var MagType =d3.select("#MagType").property("value");
 	var Depth =d3.select("#Depth").property("value");
 	var Magnitude =d3.select("#Magnitude").property("value");	
 	var NbStations =d3.select("#NbStations").property("value");	
@@ -37,8 +37,8 @@ function handleClick(){
         filteredData = filteredData.filter( element => element.DateTime == DateTime);
     }
 
-    if (EventID) {
-        filteredData = filteredData.filter( element => element.EventID == EventID);
+    if (MagType) {
+        filteredData = filteredData.filter( element => element.MagType == MagType);
     }
 
     if (Depth) {
